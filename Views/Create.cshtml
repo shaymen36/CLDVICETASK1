@@ -1,0 +1,17 @@
+﻿@model Book
+
+@using (Html.BeginForm("Create", "Books", FormMethod.Post, new { @class = "popup-form" }))
+{
+    <div>
+        @Html.LabelFor(model => model.Title)
+        @Html.TextBoxFor(model => model.Title)
+
+        @Html.LabelFor(model => model.Author)
+        @Html.TextBoxFor(model => model.Author)
+
+        @Html.LabelFor(model => model.Genre)
+        @Html.TextBoxFor(model => model.Genre)
+
+        <input type="submit" value="Create" />
+    </div>
+}
